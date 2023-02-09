@@ -9,13 +9,21 @@
 		<property name="connection.username">root</property>
 		<property name="connection.password">Pintu@123</property>
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		
 		<mapping class="com.first.Student"/>
 		<mapping class="com.first.Address"/>
-		<mapping class="com.first.StudentMark"/>
+		
 		<mapping class="com.onetoonemaping.Question"/>
 		<mapping class="com.onetoonemaping.Answer"/>
+		
+		<mapping class="com.onetomeny.Account"/>
+		<mapping class="com.onetomeny.Employee"/>
+		
+		<mapping class="com.menytomeny.Emp"/>
+		<mapping class="com.menytomeny.Project"/>
 		
 	</session-factory>
 </hibernate-configuration>

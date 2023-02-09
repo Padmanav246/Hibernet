@@ -1,4 +1,4 @@
-package com.first;
+package com.embedingobjects;
 
 import javax.persistence.Embeddable;
 

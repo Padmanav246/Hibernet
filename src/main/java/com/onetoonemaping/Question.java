@@ -3,16 +3,20 @@ package com.onetoonemaping;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "QUESTION")
 public class Question {
 	@Id
 	private int questionId;
 	
 	private String question;
 	
-	@OneToOne
+	@OneToOne  
 	private Answer answer;
+	
+	
 	
 	public int getQuestionId() {
 		return questionId;
@@ -22,18 +26,19 @@ public class Question {
 		this.questionId = questionId;
 	}
 
+	
+	
 	public String getQuestion() {
 		return question;
 	}
-
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-
+	
+	
 	public Answer getAnswer() {
 		return answer;
 	}
-
 	public void setAnswer(Answer answer) {
 		this.answer = answer;
 	}
@@ -54,5 +59,6 @@ public class Question {
 	public String toString() {
 		return "Question [questionId=" + questionId + ", question=" + question + ", answer=" + answer + "]";
 	}
-	
+
+
 }

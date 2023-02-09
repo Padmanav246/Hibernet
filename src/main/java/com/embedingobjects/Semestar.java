@@ -1,6 +1,4 @@
-package com.first;
-
-import javax.transaction.Transaction;
+package com.embedingobjects;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
