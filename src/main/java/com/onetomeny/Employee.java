@@ -1,5 +1,7 @@
 package com.onetomeny;
 import java.util.*;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -11,7 +13,7 @@ public class Employee {
 	private int empid;
 	private String name;
 	
-	@OneToMany(mappedBy = "accnumber",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "accnumber",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Account> account;
 	
 	public Employee() {
